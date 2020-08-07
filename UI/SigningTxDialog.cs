@@ -22,22 +22,14 @@ namespace Bhp.UI
                 MessageBox.Show(Strings.SigningFailedNoDataMessage);
                 return;
             }
-            try
+            ContractParametersContext context = ContractParametersContext.Parse(textBox1.Text);
+            if (!Program.CurrentWallet.Sign(context))
             {
-                ContractParametersContext context = ContractParametersContext.Parse(textBox1.Text);
-                if (!Program.CurrentWallet.Sign(context))
-                {
-                    MessageBox.Show(Strings.SigningFailedKeyNotFoundMessage);
-                    return;
-                }
-
-                textBox2.Text = context.ToString();
-                if (context.Completed) button4.Visible = true;
+                MessageBox.Show(Strings.SigningFailedKeyNotFoundMessage);
+                return;
             }
-            catch (Exception ex) 
-            {
-                MessageBox.Show("交易格式不正确！");
-            }
+            textBox2.Text = context.ToString();
+            if (context.Completed) button4.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
