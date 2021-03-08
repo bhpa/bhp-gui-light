@@ -165,6 +165,12 @@
     <Compile Include="UI\ElectionDialog.Designer.cs">
       <DependentUpon>ElectionDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\MappingAssetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MappingAssetDialog.Designer.cs">
+      <DependentUpon>MappingAssetDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ImportCustomContractDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -508,6 +514,9 @@
     <EmbeddedResource Include="UI\ElectionDialog.zh-Hans.resx">
       <DependentUpon>ElectionDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\MappingAssetDialog.resx">
+      <DependentUpon>MappingAssetDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ImportCustomContractDialog.es-ES.resx">
       <DependentUpon>ImportCustomContractDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -809,15 +818,14 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bhp-vm\bhp-vm\bhp-vm.csproj">
-      <Project>{50bf1115-8ccb-4d5b-99fc-264f81403651}</Project>
+      <Project>{d5450894-82a7-43c8-9f15-687fe70deefd}</Project>
       <Name>bhp-vm</Name>
     </ProjectReference>
     <ProjectReference Include="..\bhp\bhp\bhp.csproj">
-      <Project>{f1f219bb-df6c-482c-bd6b-190a5d679bea}</Project>
+      <Project>{18a9aa79-3a3c-4359-af6d-67aa9fa86092}</Project>
       <Name>bhp</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

@@ -46,6 +46,7 @@
             this.签名SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.claToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.assetConversionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.高级AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.提取BHP币CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
@@ -186,7 +187,8 @@
             this.toolStripSeparator5,
             this.签名SToolStripMenuItem,
             this.toolStripSeparator13,
-            this.claToolStripMenuItem});
+            this.claToolStripMenuItem,
+            this.assetConversionToolStripMenuItem});
             resources.ApplyResources(this.交易TToolStripMenuItem, "交易TToolStripMenuItem");
             this.交易TToolStripMenuItem.Name = "交易TToolStripMenuItem";
             // 
@@ -223,6 +225,12 @@
             this.claToolStripMenuItem.Name = "claToolStripMenuItem";
             resources.ApplyResources(this.claToolStripMenuItem, "claToolStripMenuItem");
             this.claToolStripMenuItem.Click += new System.EventHandler(this.claToolStripMenuItem_Click);
+            // 
+            // assetConversionToolStripMenuItem
+            // 
+            this.assetConversionToolStripMenuItem.Name = "assetConversionToolStripMenuItem";
+            resources.ApplyResources(this.assetConversionToolStripMenuItem, "assetConversionToolStripMenuItem");
+            this.assetConversionToolStripMenuItem.Click += new System.EventHandler(this.assetConversionToolStripMenuItem_Click);
             // 
             // 高级AToolStripMenuItem
             // 
@@ -743,6 +751,7 @@
         private System.Windows.Forms.ToolStripMenuItem claToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem destroyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 零钱规整AToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem assetConversionToolStripMenuItem;
     }
 }
 

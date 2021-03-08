@@ -1036,5 +1036,22 @@ namespace Bhp.UI
                 dialog.ShowDialog();
             }
         }
+
+        private void assetConversionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Transaction tx;
+            UInt160 change_address;
+            Fixed8 fee;
+            List<string> inputAddress;
+            using (MappingAssetDialog dialog = new MappingAssetDialog())
+            {
+                if (dialog.ShowDialog() != DialogResult.OK) return;
+                tx = dialog.GetTransaction(out inputAddress);
+                //change_address = dialog.ChangeAddress;
+                fee = Fixed8.Zero;
+            }
+            
+            Helper.SignAndShowInformation(tx, inputAddress);
+        }
     }
 }
